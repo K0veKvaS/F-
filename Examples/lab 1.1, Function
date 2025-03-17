@@ -1,0 +1,6 @@
+let a = 1.0
+let b = 2.0
+let c = -3.0
+let d = b * b - 4.0 * a * c
+let result = (-b + sqrt(d)) / (2.0 * a)
+printfn "Result: %f" result
