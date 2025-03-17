@@ -1,0 +1,12 @@
+let solve a b c = 
+    let d = b * b - 4.0 * a * c
+    if d < 0.0 then 
+        None
+    else 
+        let root1 = (-b + sqrt(d)) / (2.0 * a)
+        let root2 = (-b - sqrt(d)) / (2.0 * a)
+        Some (root1, root2) 
+
+match solve 1.0 2.0 -3.0 with
+| Some (r1, r2) -> printfn "Корни: %f и %f" r1 r2
+| None -> printfn "Нет действительных корней."
