@@ -1,0 +1,10 @@
+let solve (a, b, c) = 
+    let d = b * b - 4.0 * a * c
+    if d < 0.0 then
+        failwith "Нет действительных корней"
+    else
+        let root1 = (-b + sqrt d) / (2.0 * a)
+        let root2 = (-b - sqrt d) / (2.0 * a)
+        (root1, root2)
+let roots = solve (1.0, 2.0, -3.0)
+printfn "Корни уравнения: %A" roots
